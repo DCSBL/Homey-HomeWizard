@@ -24,5 +24,15 @@
         "plugin_battery": {
             "autorize_instruction": "Druk op de knop van de plugin batterij om de koppeling te voltooien"
         }
+    },
+    "enable_api": {
+        "title": "Schakel de API in",
+        "instructions": {
+            "intro": "Cool title",
+            "1_open_homewizard_app_go_to_settings": "Open the app and go to settings",
+            "2_open_menu_meters": "Open the menu 'Meters' and select your device",
+            "3_enable_api": "Turn on the 'API' switch"
+        },
+        "skip": "Overslaan"
     }
 }

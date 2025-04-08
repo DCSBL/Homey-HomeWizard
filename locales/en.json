@@ -24,5 +24,17 @@
         "plugin_battery": {
             "autorize_instruction": "Press the button on the Plugin Battery to complete the pairing"
         }
+    },
+    "enable_api": {
+        "title": "Setting up __name__",
+        "intro": "Your __model__ with serial number __id__ has its API disabled. To enable it, follow the steps below.",
+        "instructions": {
+            "1_open_homewizard_app_go_to_settings": "Open the HomeWizard Energy app and go to settings",
+            "2_open_meter_menu": "Open the menu 'Meters'",
+            "3_select_device": "Select your __model__ with serial number __id__",
+            "4_enable_api": "Turn on the 'API' switch"
+        },
+        "continue": "Continue",
+        "skip": "Overslaan"
     }
 }

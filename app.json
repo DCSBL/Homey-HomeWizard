@@ -730,21 +730,17 @@
       },
       "pair": [
         {
-          "id": "start",
-          "navigation": {
-            "next": "list_devices"
-          }
-        },
-        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
-            "next": "add_devices"
+            "next": "enable_api"
           }
         },
         {
-          "id": "add_devices",
-          "template": "add_devices"
+          "id": "enable_api",
+          "navigation": {
+            "prev": "list_devices"
+          }
         }
       ],
       "id": "SDM230"
@@ -1331,21 +1327,17 @@
       ],
       "pair": [
         {
-          "id": "start",
-          "navigation": {
-            "next": "list_devices"
-          }
-        },
-        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
-            "next": "add_devices"
+            "next": "enable_api"
           }
         },
         {
-          "id": "add_devices",
-          "template": "add_devices"
+          "id": "enable_api",
+          "navigation": {
+            "prev": "list_devices"
+          }
         }
       ],
       "id": "energy_socket"

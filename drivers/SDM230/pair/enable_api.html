@@ -1,0 +1,53 @@
+<header class="homey-header">
+  <h1 id="title" class="homey-title" data-i18n="enable_api.title">
+  </h1>
+  <p id="intro" class="homey-subtitle" data-i18n="enable_api.intro">
+  </p>
+</header>
+
+<ol>
+  <li data-i18n="enable_api.instructions.1_open_homewizard_app_go_to_settings"></li>
+  <li data-i18n="enable_api.instructions.2_open_meter_menu"></li>
+  <li id="device-info" data-i18n="enable_api.instructions.3_select_device"></li>
+  <li data-i18n="enable_api.instructions.4_enable_api"></li>
+</ol>
+
+<button id="authorize-button" class="homey-button-primary-full"
+  data-i18n="enable_api.continue"></button>
+
+<button id="skip-button" class="homey-button-secondary-full" data-i18n="enable_api.skip"></button>
+
+<script type="application/javascript">
+
+  let selectedDevice = null;
+
+  // Start the authorization process
+  Homey.emit("get_device");
+
+  Homey.on("show_device", function (message) {
+    console.log(device);
+
+    selectedDevice = device;
+
+    document.getElementById('title').innerHTML = Homey.__("enable_api.title", {
+      name: device.name,
+    })
+
+    document.getElementById('intro').innerHTML = Homey.__("enable_api.intro", {
+      model: device.data.model,
+      id: device.data.id,
+    })
+
+    document.getElementById('device-info').innerHTML = Homey.__("enable_api.instructions.3_select_device", {
+      model: device.data.model,
+      id: device.data.id,
+    })
+
+  });
+
+  document.getElementById('skip-button').addEventListener('click', async () => {
+    Homey.emit("skip", selectedDevice);
+  });
+
+
+</script>
